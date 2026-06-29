@@ -3,6 +3,8 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
 import Products from './components/Products';
+import Testimonials from './components/Testimonials';
+import FAQs from './components/FAQs';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import WhatsAppFloat from './components/WhatsAppFloat';
@@ -12,10 +14,14 @@ function App() {
   return (
     <div className="min-h-screen bg-black text-white">
       <Header />
-      <Hero />
-      <About />
-      <Products />
-      <Contact />
+      <main>
+        <Hero />
+        <About />
+        <Products />
+        <Testimonials />
+        <FAQs />
+        <Contact />
+      </main>
       <Footer />
       <WhatsAppFloat />
     </div>

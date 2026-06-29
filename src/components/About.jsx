@@ -1,120 +1,142 @@
 import React from 'react';
-import { Users, Award, Clock, MapPin } from 'lucide-react';
+import { Users, Award, Clock, MapPin, CheckCircle, ShieldCheck, HeartHandshake, Eye } from 'lucide-react';
 
 const About = () => {
   const stats = [
     {
-      icon: <Users size={40} />,
-      number: '5000+',
-      label: 'عميل راضٍ'
+      icon: <Users size={32} className="text-[#d4af37]" />,
+      number: '+5000',
+      label: 'عميل سعيد يثق بنا'
     },
     {
-      icon: <Award size={40} />,
-      number: '15+',
-      label: 'سنة خبرة'
+      icon: <Award size={32} className="text-[#d4af37]" />,
+      number: '+15',
+      label: 'سنة من التميز والريادة'
     },
     {
-      icon: <Clock size={40} />,
+      icon: <Clock size={32} className="text-[#d4af37]" />,
       number: '24/7',
-      label: 'خدمة العملاء'
+      label: 'دعم فني واستشارات مجانية'
     },
     {
-      icon: <MapPin size={40} />,
-      number: '50+',
-      label: 'مدينة نخدمها'
+      icon: <MapPin size={32} className="text-[#d4af37]" />,
+      number: '+50',
+      label: 'مدينة نغطيها بالكامل'
     }
   ];
 
-  const features = [
+  const coreValues = [
     {
-      title: 'معاينة مجانية',
-      description: 'نقدم خدمة المعاينة المجانية في الموقع قبل الشراء لتسهيل اتخاذ القرار.'
+      title: 'معاينة فنية مجانية',
+      description: 'نرسل مهندسينا لمعاينة الموقع وتحديد حجم المكيفات المناسب وتوزيع الأثاث الأمثل مجاناً.',
+      icon: <Eye size={20} className="text-black" />
     },
     {
-      title: 'جودة عالية',
-      description: 'نختار منتجاتنا بعناية فائقة لضمان أعلى معايير الجودة والمتانة'
+      title: 'أعلى معايير الجودة',
+      description: 'نستورد أخشابنا من أفضل الغابات الأوروبية، ومكيفاتنا مجهزة بضواغط إنفيرتر موفرة للطاقة.',
+      icon: <ShieldCheck size={20} className="text-black" />
     },
     {
-      title: 'أسعار تنافسية',
-      description: 'نقدم أفضل الأسعار في السوق مع إمكانية التقسيط المريح'
-    },
-    {
-      title: 'خدمة ما بعد الشراء',
-      description: 'فريق متخصص لخدمة العملاء والصيانة على مدار الساعة'
-    },
-    {
-      title: 'توصيل وتركيب',
-      description: 'خدمة توصيل مجانية وتركيب احترافي بواسطة فنيين مدربين'
+      title: 'خدمة ما بعد البيع',
+      description: 'عقود صيانة دورية للمكيفات وخدمة ضمان ممتد تغطي قطع الغيار واليد العاملة فوراً.',
+      icon: <HeartHandshake size={20} className="text-black" />
     }
   ];
 
   return (
-    <section id="about" className="py-20 bg-black">
-      <div className="container mx-auto px-4">
+    <section id="about" className="relative py-24 bg-black overflow-hidden">
+      {/* Background glow */}
+      <div className="absolute top-1/2 right-0 w-96 h-96 bg-[#d4af37]/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
         {/* Section Header */}
-        <div className="text-center mb-10 lg:mb-16">
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6">
-            <span className="text-primary">من نحن</span>
+        <div className="text-center mb-16 max-w-3xl mx-auto">
+          <span className="text-xs text-[#d4af37] font-bold tracking-widest uppercase mb-3 block">قصتنا ورؤيتنا</span>
+          <h2 className="text-3xl sm:text-5xl font-extrabold text-white mb-6">
+            من نحن في <span className="gold-gradient-text gold-glow-text">الحارثي</span>
           </h2>
-          <p className="text-base sm:text-xl text-gray-300 max-w-3xl mx-auto">
-            شركة رائدة في مجال الأثاث ومكيفات الهواء، نسعى لتقديم أفضل المنتجات والخدمات لعملائنا الكرام
+          <div className="w-16 h-1 bg-gradient-to-r from-[#aa7c11] to-[#d4af37] mx-auto mb-6 rounded-full"></div>
+          <p className="text-gray-400 text-base sm:text-lg leading-relaxed">
+            نحن شريكك المثالي لتأثيث بيتك ومكتبك وتأمين الجو المثالي له. على مدى أكثر من 15 عاماً، 
+            التزمنا بتقديم حلول متكاملة تدمج بين جمال التصميم وعصرية الأثاث وقوة أجهزة التكييف.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center mb-10 lg:mb-20">
-          {/* Content */}
-          <div className="fade-in">
-            <h3 className="text-xl sm:text-3xl font-bold text-white mb-4 sm:mb-6">
-              رحلتنا نحو <span className="text-primary">التميز</span>
-            </h3>
-            
-            <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-              منذ تأسيسنا قبل أكثر من 15 عاماً، ونحن نعمل بشغف لتوفير أجود أنواع الأثاث المنزلي والمكتبي، 
-              بالإضافة إلى أحدث مكيفات الهواء من أفضل الماركات العالمية. نؤمن بأن كل منزل ومكتب يستحق 
-              أن يكون مريحاً وأنيقاً.
-            </p>
-            
-            <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-6 sm:mb-8">
-              فريقنا المتخصص يعمل على مدار الساعة لضمان رضا عملائنا، من خلال تقديم استشارات مجانية، 
-              وخدمات توصيل وتركيب احترافية، وضمان شامل على جميع منتجاتنا.
-            </p>
+        {/* Content Split Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center mb-20">
+          
+          {/* Right Column: Values & Description */}
+          <div className="lg:col-span-7 space-y-8 text-right">
+            <div>
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-white mb-4">
+                تأثيث وتكييف متكامل تحت <span className="text-[#d4af37]">سقف واحد</span>
+              </h3>
+              <p className="text-gray-400 text-base sm:text-lg leading-relaxed mb-6 font-light">
+                من الصالونات المودرن الفاخرة إلى غرف النوم المريحة ومطابخ المستقبل، نوفر أثاثاً يدوم طويلاً. 
+                وبجانب الأثاث، نقوم بتجهيز منزلك بأقوى أنظمة التكييف المركزي والسبليت من كبرى الشركات العالمية مثل LG وGree، 
+                مع فنيين محترفين للتثبيت.
+              </p>
+            </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-gray-900 p-6 rounded-xl">
-                  <h4 className="text-primary font-bold text-lg mb-2">{feature.title}</h4>
-                  <p className="text-gray-400 text-sm">{feature.description}</p>
+            {/* Core Values / Features Cards */}
+            <div className="space-y-4">
+              {coreValues.map((value, index) => (
+                <div key={index} className="glass-panel p-5 rounded-2xl flex items-start gap-4 hover:border-[#d4af37]/30 transition-all duration-300">
+                  <div className="bg-gradient-to-br from-[#d4af37] to-[#aa7c11] p-3 rounded-xl flex-shrink-0">
+                    {value.icon}
+                  </div>
+                  <div>
+                    <h4 className="text-white font-bold text-base sm:text-lg mb-1">{value.title}</h4>
+                    <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">{value.description}</p>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Image */}
-          <div className="relative">
-            <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
+          {/* Left Column: Premium Framed Image */}
+          <div className="lg:col-span-5 relative">
+            <div className="relative z-10 rounded-[2rem] overflow-hidden border border-white/10 shadow-[0_0_40px_rgba(212,175,55,0.08)] group">
               <img 
                 src="/assets/images/TaHLLJOUnWt9.jpg" 
-                alt="معرضنا" 
-                className="w-full h-96 lg:h-[500px] object-cover"
+                alt="معرض الحارثي الفاخر" 
+                className="w-full h-[380px] sm:h-[480px] object-cover transition-transform duration-700 group-hover:scale-103"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent"></div>
+              
+              {/* Overlaid stats summary */}
+              <div className="absolute bottom-6 right-6 left-6 text-right">
+                <div className="inline-flex items-center gap-1.5 bg-[#d4af37]/10 border border-[#d4af37]/20 px-3 py-1 rounded-full text-[#d4af37] text-xs font-semibold mb-2">
+                  <CheckCircle size={12} />
+                  معرضنا الرئيسي بالرياض
+                </div>
+                <h4 className="text-white text-lg font-bold">مساحة عرض تتجاوز 2000 متر مربع</h4>
+                <p className="text-xs text-gray-400 mt-1">تضم أحدث تشكيلات الأثاث والمكيفات تحت سقف واحد</p>
+              </div>
             </div>
-            
-            {/* Decorative elements */}
-            <div className="absolute -top-6 -left-6 w-24 h-24 bg-primary rounded-full opacity-20"></div>
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary rounded-full opacity-10"></div>
+
+            {/* Decorative layout boxes */}
+            <div className="absolute -top-6 -left-6 w-24 h-24 border border-[#d4af37]/20 rounded-2xl pointer-events-none -z-10"></div>
+            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#d4af37]/5 rounded-[2.5rem] pointer-events-none -z-10 blur-md"></div>
           </div>
         </div>
 
-        {/* Stats */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8">
+        {/* Section Divider Line */}
+        <div className="section-divider mb-16"></div>
+
+        {/* Stats Grid */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
           {stats.map((stat, index) => (
-            <div key={index} className="text-center bg-gray-900 p-8 rounded-2xl hover-scale">
-              <div className="text-primary mb-4 flex justify-center">
+            <div 
+              key={index} 
+              className="glass-panel glass-panel-hover p-6 sm:p-8 rounded-2xl text-center flex flex-col items-center justify-center gap-2 group"
+            >
+              <div className="bg-[#18181b] border border-white/5 p-4 rounded-full group-hover:bg-[#d4af37]/10 transition-colors">
                 {stat.icon}
               </div>
-              <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
-              <div className="text-gray-400">{stat.label}</div>
+              <div className="text-2xl sm:text-4xl font-extrabold text-white mt-2 group-hover:text-[#d4af37] transition-colors">{stat.number}</div>
+              <div className="text-gray-400 text-xs sm:text-sm">{stat.label}</div>
             </div>
           ))}
         </div>
@@ -124,4 +146,3 @@ const About = () => {
 };
 
 export default About;
-
